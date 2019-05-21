@@ -30,6 +30,7 @@ public class Folder {
     public Folder(String title) {
         this.title = title;
         this.files = new ArrayList<File>();
+        this.user = user;
     }
 
     public String getTitle() {
