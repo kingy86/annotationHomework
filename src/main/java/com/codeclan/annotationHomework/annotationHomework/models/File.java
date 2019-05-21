@@ -1,5 +1,8 @@
 package com.codeclan.annotationHomework.annotationHomework.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -19,6 +22,11 @@ public class File {
     @Column(name="size")
     private int size;
 
+    @JsonIgnoreProperties("files")
+    @ManyToOne
+    @JoinColumn(name="folder_id", nullable = false)
+    private Folder folder;
+
     public File() {
     }
 
@@ -26,6 +34,7 @@ public class File {
         this.title = title;
         this.extension = extension;
         this.size = size;
+        this.folder = folder;
     }
 
     public Long getId() {
