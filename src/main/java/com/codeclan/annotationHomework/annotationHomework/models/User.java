@@ -23,7 +23,7 @@ public class User {
 
     public User(String name) {
         this.name = name;
-        this.folders = new ArrayList<>();
+        this.folders = new ArrayList<Folder>();
     }
 
     public String getName() {
