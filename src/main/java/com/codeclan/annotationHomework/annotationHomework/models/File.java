@@ -19,6 +19,9 @@ public class File {
     @Column(name="size")
     private int size;
 
+    public File() {
+    }
+
     public File(String title, String extension, int size) {
         this.title = title;
         this.extension = extension;
