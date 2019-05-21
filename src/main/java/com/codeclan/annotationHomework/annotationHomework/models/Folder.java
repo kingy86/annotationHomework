@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Folder {
 
@@ -39,5 +40,9 @@ public class Folder {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+     public List<File> getFiles() {
+        return files;
     }
 }

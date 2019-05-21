@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class User {
 
@@ -32,5 +33,9 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Folder> getFolders(){
+        return folders;
     }
 }
